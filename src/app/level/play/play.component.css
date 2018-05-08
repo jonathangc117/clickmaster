@@ -1,0 +1,11 @@
+.card-title {
+  position: relative;
+  text-align: center;
+}
+
+.col-centered {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+  }

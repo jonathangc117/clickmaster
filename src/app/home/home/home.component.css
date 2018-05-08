@@ -1,0 +1,43 @@
+.card-svg{
+    position: relative;
+    height: 30%;
+    width: 100%;
+    left: -4%;
+    transform: scale(1.1);
+    
+}
+.jumbotron{
+    background-color: rgba(255, 255, 255, 0);
+}
+.center{
+text-align: center;
+}
+#banner{
+    
+background-image: url("/assets/images/clickmaster2.jpg");
+
+height: auto;
+background-size: 100%;
+background-repeat: no-repeat;
+}
+@media screen and (min-width: 740px) {
+#banner{
+    background-image: url("/assets/images/clickmaster2.jpg");
+
+height: 400px;
+background-size: 100%;
+background-repeat: no-repeat;
+}
+
+}
+
+@media screen and (min-width: 840px) {
+    #banner{
+        background-image: url("/assets/images/clickmaster2.jpg");
+    
+    height: 450px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+    
+    }

@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+ 
+     /* background-color: #BFFFF6; */
+    background-image: url("/assets/images/7560.jpg");
+}
+.jumbotron{
+    background-color: rgba(197, 218, 255, 0.7);
+}

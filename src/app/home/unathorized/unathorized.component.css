@@ -1,0 +1,11 @@
+.center{
+    text-align: center;
+}
+.jumbotron{
+    
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 80%;
+}

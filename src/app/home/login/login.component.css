@@ -1,0 +1,12 @@
+.dark-modal .modal-content {
+    background-color: rgba(197, 218, 255, 0.7);
+  color: white;
+
+  }
+
+.dark-modal .close {
+  color: white;
+} 
+ label.center-block {
+    width: 100%;
+}

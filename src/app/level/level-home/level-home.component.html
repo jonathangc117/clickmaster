@@ -1,0 +1,16 @@
+
+<ng-container *ngFor="let card of cards; let h= index" >
+<a *ngIf="unlocked[h]" class="nav-link" routerLink="/play/{{card.id}}" [@flyInOut]="in" (@flyInOut.done)="doNext()" >
+<div class="card border-primary mb-3" >
+    
+  <div class="card-header">level {{card.id}}</div>
+  <div class="card-body">
+    <h4 class="card-title">{{card.title}}</h4>
+    <p class="card-text">{{card.description}}</p>
+  </div>
+  
+</div>
+</a>
+
+
+</ng-container>

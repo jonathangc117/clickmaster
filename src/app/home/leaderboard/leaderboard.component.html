@@ -1,0 +1,21 @@
+<div class="container-fluid">
+<div class="wrapper" *ngIf="users">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col" *ngFor="let level of levels">Level {{level.id}}</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <th scope="row">{{user.name}}</th>
+    <ng-container *ngFor="let level of user.userLevel">
+    <td *ngIf="level.time!==0">{{level.time}}</td>
+   </ng-container>
+  </tr>
+</tbody>
+</table>
+ </div>
+</div>

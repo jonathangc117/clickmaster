@@ -1,0 +1,33 @@
+.right{
+    position: relative;
+    left: 220%;
+    
+}
+.nav-link:hover{
+    cursor: pointer;
+}
+.navbar{
+    background-color: rgb(191, 255, 246);
+}
+
+.float{
+    position: absolute;
+    float: right;
+    z-index: 1;
+    left: 30%;
+    width: 30%;
+   
+    border-radius: 10px;
+    background-color: rgb(191, 255, 246);
+}
+@media screen and (max-width: 570px) {
+    .float {
+        position: absolute;
+        float: right;
+        z-index: 1;
+        left: 0%;
+        width: 100%;
+        background-color: rgb(191, 255, 246); 
+        border-radius: 10px;
+    }
+  }

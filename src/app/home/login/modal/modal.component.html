@@ -1,0 +1,16 @@
+<button class="btn btn-outline-primary" (click)="open(modal)">SIGN IN</button>
+
+<ng-template #modal let-d="dismiss">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="modal-header">
+            
+            <button type="button" class="close" aria-label="Close" (click)="d('')">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <app-login> </app-login>
+        </div>
+       
+    </form>
+</ng-template>

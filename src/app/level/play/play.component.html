@@ -1,0 +1,57 @@
+<div *ngIf="ready">
+  <br>
+  <br>
+    <h3 class="card-title">Time: {{countDown | async}}</h3>
+  </div>
+<br>
+<div class="container">
+    <div class="row">
+      <ng-container *ngIf="ready">
+        <ng-container *ngFor="let button of buttons ;let h = index">
+<div class="card border-primary col-6" [style.background-color]="backgroundColor" [@buttonState]="states[h]" (mousedown)="changeState(h)" (mouseup)="changeState(h)" (click)="buttonClicked(h, $event)">
+    
+    
+    <div class="card-body">
+      <h3 class="card-title center">{{button}} <ng-container *ngIf="level[0].keys!=0">  {{keys[h]}} </ng-container></h3>
+      
+    </div>
+    
+  </div>
+</ng-container>
+</ng-container>
+
+</div>
+
+</div>
+<div class="jumbotron" [hidden]="!win">
+    <h1 class="display-3 card-title">{{secondText}}</h1>
+    <h3 class="card-title" *ngIf="finalCount" > Your time was {{finalCount}} seconds</h3>
+    <h3 class="card-title" *ngIf="(finalCount<lastRecord) && (finalCount) && (secondText === 'you win!')" > new record!</h3>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+      <progress-bar [value]="level[0].clicks - x" [max]="level[0].clicks"></progress-bar>
+  </div>
+<br>
+<br>
+  <div class="container">
+    <div class="row">
+        <div class="col-4">
+
+            <a routerLink="/play/{{service.currentUrlId-1}}" (click)="refresh()">
+  <button type="button" [hidden]="ready" [disabled]="id===1" class="btn btn-primary col-centered" >Previous level</button>
+            </a>
+  </div>
+  <div class="col-4">
+
+    <button type="button" class="btn btn-primary col-centered" [hidden]="ready" (click)="startGame()">{{text}}</button>
+
+  </div>
+  <div class="col-4">
+      <a  routerLink="/play/{{service.currentUrlId+1}}" (click)="refresh()">
+  <button type="button" [hidden]="ready" [disabled]="!(service.loggedUser.userLevel[id-1].time > 0) && (service.loggedUser)" class="btn btn-primary col-centered" >Next level</button>
+      </a>        
+</div>
+    </div>
+  </div>
